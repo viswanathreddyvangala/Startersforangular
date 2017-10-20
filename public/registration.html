@@ -1,0 +1,44 @@
+<!-- 
+<div id="parent" ng-controller="registration">
+
+    <form>
+    <div class="form-group">
+       <label>Username</label>
+       <input type="text" class="form-control" id="username" ng-model="register.username">
+     </div>
+        <div class="form-group">
+       <label for="email" >Email address:</label>
+       <input type="email" class="form-control" id="email" ng-model="register.email">
+     </div>
+    <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" ng-model="register.password">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+     <button type="submit" class="btn btn-default" ng-click="registeruser()">Submit</button>
+</form>
+</div>
+ -->
+
+    <div class="container" ng-controller="registration">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <h1 class="text-center login-title">REGISTRATION FORM</h1>
+                <div class="account-wall">
+                    <form class="form-signin">
+                    <input type="text" class="form-control" placeholder="name" ng-model="register.username" required autofocus>
+                    <input type="password" class="form-control" placeholder="Password" ng-model="register.password"required>
+                    <input type="password" class="form-control" placeholder="confirm passowrd" ng-model="register.confirmpassword" required>
+                    <input type="email" class="form-control" placeholder="Email" ng-model="register.email" required>
+                    <button class="btn btn-mg btn-primary btn-block" type="submit" ng-click="registeruser()">
+                        Register</button>
+                            <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                    </form>
+                </div>
+                <a href="#login" class="text-center new-account">Login here </a>
+            </div>
+        </div>
+    </div>
+

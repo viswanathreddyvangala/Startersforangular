@@ -1,0 +1,51 @@
+<div class="container" ng-controller="contactcontroller">
+    <center>
+        <h1 style="color:white"> Contact list app </h1></center>
+    <table class="table" style="color:white;">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>PHONE</th>
+                <th>ADRESS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input class="form-control" ng-model="contact.name">
+                </td>
+                <td>
+                    <input class="form-control" ng-model="contact.phone">
+                </td>
+                <td>
+                    <input class="form-control" ng-model="contact.address">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" ng-click="addcontact()">ADD</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-info" ng-click="updatecontact()">UPDATE</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" ng-click="deleteall()">DELETE ALL</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" ng-click="getall()">getall</button>
+                </td>
+
+                <tr>
+                    <tr ng-repeat="con in contactlist">
+                        <th>{{con.name}}</th>
+                        <th>{{con.phone}}</th>
+                        <th>{{con.address}}</th>
+                        <th>
+                            <button type="button" class="btn btn-danger" ng-click="deletecontact(con._id)">DELETE</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-warning" ng-click="editcontact(con._id)">EDIT</button>
+                            </td>
+                    </tr>
+        </tbody>
+
+    </table>
+    <div>
